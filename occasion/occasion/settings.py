@@ -48,6 +48,7 @@ PROJECT_APPS = [
     'occasion_bot',
     'telegram',
     'users',
+    'directory',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
