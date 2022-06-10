@@ -45,10 +45,11 @@ THIRD_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
+    'basics',
+    'directory',
     'occasion_bot',
     'telegram',
     'users',
-    'directory',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
@@ -155,6 +156,9 @@ REST_FRAMEWORK = {
         '%d-%b-%Y',
         '%Y-%m-%d',
         '%Y-%m-%dT00:00:00.000Z',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',

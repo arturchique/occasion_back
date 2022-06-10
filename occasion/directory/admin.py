@@ -1,3 +1,14 @@
 from django.contrib import admin
 
-# Register your models here.
+from directory import models
+from basics.admin import BaseVerboseModelAdmin
+
+
+class RegionAdmin(BaseVerboseModelAdmin):
+    list_display = ('id', 'name', 'country', )
+    list_filter = ('country', )
+    search_fields = ('id', 'name', )
+
+
+# Registrations
+admin.site.register(models.Region, RegionAdmin)

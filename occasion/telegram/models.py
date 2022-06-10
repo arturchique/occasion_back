@@ -47,7 +47,7 @@ class TelegramInviteLink(models.Model):
 
 
 class TelegramChannel(models.Model):
-    channel_id = models.BigIntegerField(primary_key=True, auto_created=False)
+    tg_id = models.BigIntegerField(primary_key=True, auto_created=False)
     name = models.CharField(max_length=64)
     is_active = models.BooleanField(default=False)
     from_region = models.ForeignKey(
