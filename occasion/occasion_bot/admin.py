@@ -5,13 +5,31 @@ from basics.admin import BaseVerboseModelAdmin
 
 
 class IssueAdmin(BaseVerboseModelAdmin):
-    # TODO write tomorrow)))
-    pass
+    list_display = (
+        'id',
+        'summary',
+        'description',
+        'expected_date',
+        'status',
+        'creator',
+        'executor',
+        'channel'
+    )
+    list_filter = ('channel', 'status', 'to_region',)
+    search_fields = (
+        'summary',
+        'description',
+        'channel',
+        'creator',
+        'executor',
+        'channel__from_region',
+        'channel__to_region',
+    )
+    readonly_fields = ('creator', )
 
 
 class DeliveryItemAdmin(BaseVerboseModelAdmin):
-    # TODO write tomorrow)))
-    pass
+    list_display = ('name', 'weight', 'width', 'height', 'depth', 'issue', )
 
 
 # Registrations
