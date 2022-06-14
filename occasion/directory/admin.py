@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from directory import models
-from basics.admin import BaseVerboseModelAdmin
+from basics.base.admin import BaseVerboseModelAdmin
 
 
 class RegionAdmin(BaseVerboseModelAdmin):

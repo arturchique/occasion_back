@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 
 
 from telegram import models as telegram_models
-from occasion_bot import consts
+from occasion_api import consts
 
 User = get_user_model()
 

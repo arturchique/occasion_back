@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class OccasionBotConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'occasion_bot'
+    name = 'occasion_api'

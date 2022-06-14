@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from occasion_bot import models
-from basics.admin import BaseVerboseModelAdmin
+from occasion_api import models
+from basics.base.admin import BaseVerboseModelAdmin
 
 
 class IssueAdmin(BaseVerboseModelAdmin):
@@ -15,15 +15,14 @@ class IssueAdmin(BaseVerboseModelAdmin):
         'executor',
         'channel'
     )
-    list_filter = ('channel', 'status', 'to_region',)
+    list_filter = ('channel', 'status', )
     search_fields = (
         'summary',
         'description',
         'channel',
         'creator',
         'executor',
-        'channel__from_region',
-        'channel__to_region',
+        'channel__name',
     )
     readonly_fields = ('creator', )
 

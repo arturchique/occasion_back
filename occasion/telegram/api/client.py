@@ -8,12 +8,13 @@ from pyrogram import Client
 
 
 class TelegramClient:
-    def __init__(self, session_name: str, api_id: str, api_hash: str):
+    def __init__(self, name: str, api_id: str, api_hash: str, session_string: str):
         self.app = Client(
-            name=session_name,
+            name=name,
             api_id=api_id,
             api_hash=api_hash,
-            device_model='Occasion'
+            device_model='Occasion',
+            session_string=session_string,
         )
 
     def __enter__(self):

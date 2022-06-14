@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from users import models
-from basics.admin import BaseVerboseModelAdmin
+from basics.base.admin import BaseVerboseModelAdmin
 
 
 class UserAdmin(BaseVerboseModelAdmin):

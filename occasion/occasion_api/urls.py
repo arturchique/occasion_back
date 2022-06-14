@@ -1,5 +1,5 @@
 from django.urls import path
-from occasion_bot.views import index
+from occasion_api.views import index
 
 
 urlpatterns = [

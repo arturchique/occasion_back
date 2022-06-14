@@ -1,0 +1,2 @@
+class ExternalError(Exception):
+    pass
