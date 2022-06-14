@@ -1,2 +1,5 @@
+/occasion/occasion.session
 *.sqlite3
+
 .idea
+bot_creds
