@@ -36,8 +36,6 @@ class BaseExternalService(celery.Task, abc.ABC):
         """
         Calls user external service.
         Args:
-            user (User):
-            author (Optional[User]):
             meta (Optional[Dict[str, Any]]):
             raise_exception (bool):
             sync (bool):
@@ -94,8 +92,6 @@ class BaseExternalService(celery.Task, abc.ABC):
         """
         Calls user external service.
         Args:
-            user (User):
-            author (Optional[User]):
             meta (Optional[Dict[str, Any]]):
             raise_exception (bool):
         Returns:
